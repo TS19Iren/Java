@@ -1,4 +1,5 @@
 package hw1.task6;
+
 /*
 Реализовать функцию возведения числа а в степень b. a, b из Z.
 Сводя количество выполняемых действий к минимуму.
@@ -8,15 +9,15 @@ package hw1.task6;
  */
 public class Main {
     public static void main(String[] args) {
-int a = 3;
-int b = 2;
-int result = aInBDegree(a,b);
+        int a = 3;
+        int b = 2;
+        int result = aInBDegree(a, b);
         System.out.println(result);
 
     }
-    static int aInBDegree(int a, int b){
-        if (b==0)
+    static int aInBDegree(int a, int b) {
+        if (b == 0)
             return 1;
-        return aInBDegree(a,b-1)*a;
+        return aInBDegree(a, b - 1) * a;
     }
 }
