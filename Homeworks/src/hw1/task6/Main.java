@@ -9,15 +9,23 @@ package hw1.task6;
  */
 public class Main {
     public static void main(String[] args) {
-        int a = 3;
+        int a = 2;
         int b = 2;
-        int result = aInBDegree(a, b);
+        int c = -2;
+        double result = aInBDegree(a, b);
         System.out.println(result);
+        double result2 = aInBDegree(a, c);
+        System.out.println(result2);
 
     }
-    static int aInBDegree(int a, int b) {
+    static double aInBDegree(int a, int b) {
         if (b == 0)
             return 1;
-        return aInBDegree(a, b - 1) * a;
+        else if(b<0){
+            return 1/(aInBDegree(a, -b - 1) * a);
+
+        } else{
+            return aInBDegree(a, b - 1) * a;
+        }
     }
 }
