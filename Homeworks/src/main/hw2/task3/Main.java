@@ -1,5 +1,11 @@
 package hw2.task3;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,11 +25,26 @@ import java.nio.file.Paths;
 Студент Краснов получил 5 по предмету Физика.
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        JsonArray jsonElements = readingJson();
+        System.out.println(output(jsonElements));
+    }
+    static JsonArray readingJson() throws IOException {
+      Reader reader = Files.newBufferedReader(Paths.get("D:\\Java_education\\Homeworks\\src\\resources\\students.json"));
+      JsonArray parser = JsonParser.parseReader(reader).getAsJsonArray();
+      return parser;
 
     }
-    static  void readingJson(){
-      //  Reader reader = Files.newBufferedReader(Paths.get("students.json"));
+    static String output (JsonArray a){
+        StringBuilder sb = new StringBuilder();
 
+        for (JsonElement jsonElement : a) {
+            JsonObject obj = jsonElement.getAsJsonObject();
+            obj.get("фамилия");
+            sb.append("Студент ").append(obj.get("фамилия").getAsString())
+                    .append(" получил ").append(obj.get("оценка").getAsString())
+                    .append(" по предмету ").append(obj.get("предмет").getAsString()).append("\n");
+        }
+return sb.toString();
     }
 }
