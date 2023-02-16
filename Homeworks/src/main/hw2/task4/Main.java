@@ -55,10 +55,8 @@ public class Main {
                     System.out.println("Error! Введите корректный оператор");
                     writeLog("Error! Введите корректный оператор");
             }
-
         return result;
     }
-
     static void writeLog(String a) {
         Date date = new Date();
         try (FileWriter test = new FileWriter("testcalc.txt", true)) {
@@ -68,7 +66,6 @@ public class Main {
             System.out.println("Было исключение" + e.getMessage());
         }
     }
-
 }
 
 
