@@ -1,4 +1,4 @@
-package hw2.task1;
+package main.hw2.task1;
 
 /*
 Дана строка sql-запроса "select * from students where ".

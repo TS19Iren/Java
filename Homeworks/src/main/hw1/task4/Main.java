@@ -1,6 +1,4 @@
-package hw1.task4;
-
-import java.sql.PreparedStatement;
+package main.hw1.task4;
 
 /*
 4. *+Задано уравнение вида q + w = e, q, w, e >= 0. Некоторые цифры

@@ -1,4 +1,4 @@
-package hw1.task2;
+package main.hw1.task2;
 
 /*
 Вывести все простые числа от 1 до 1000

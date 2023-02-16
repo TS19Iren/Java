@@ -1,4 +1,4 @@
-package hw1.task6;
+package main.hw1.task6;
 
 /*
 Реализовать функцию возведения числа а в степень b. a, b из Z.
