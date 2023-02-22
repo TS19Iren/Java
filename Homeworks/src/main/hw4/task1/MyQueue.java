@@ -4,6 +4,7 @@ enqueue() - помещает элемент в конец очереди
 dequeue() - возвращает первый элемент из очереди и удаляет его
 first() - возвращает первый элемент из очереди, не удаляя его
  */
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,14 +21,15 @@ public class MyQueue {
         this.queue.add(item);
     }
 
-    public Integer dequeue(){
+    public Integer dequeue() {
         return this.queue.remove(0);
     }
-    public Integer first(){
+
+    public Integer first() {
         return this.queue.get(0);
     }
 
-public String toString(){
+    public String toString() {
         return this.queue.toString();
-}
+    }
 }
