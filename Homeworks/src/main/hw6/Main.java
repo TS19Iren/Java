@@ -29,11 +29,11 @@ public class Main {
 
         final var notebooks = Arrays.asList(notebook1, notebook2, notebook3, notebook4, notebook5, notebook6);
         final var sort = new SortingClass(notebooks);
-        System.out.println("BEFORE: " + notebooks);
+        System.out.println("All notebooks: " + notebooks);
         UserRequest ur = new UserRequest();
         final var map = ur.createMap();
         final var sortedNotebooks = sort.sort(map);
-        System.out.println("AFTER: " + sortedNotebooks);
+        System.out.println("Filter information: " + sortedNotebooks);
 
 
     }

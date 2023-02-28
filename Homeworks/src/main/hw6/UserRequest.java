@@ -12,7 +12,7 @@ public class UserRequest {
         Map<CriteriaName, Object> map = new HashMap<>();
         while (true) {
             System.out.println("Choose filter:\n 1 - Colour\n 2 - Brand\n 3 - RAM\n " +
-                    "4 - Monitor size\n 5 - Price 6\n - Video card\n 0 - Finish your filter params");
+                    "4 - Monitor size\n 5 - Price\n 6 - Video card\n 0 - Finish your filter params");
             final var s = scan.nextLine();
             if (s.equals("0")) {
                 break;
@@ -31,7 +31,7 @@ public class UserRequest {
                 map.put(CriteriaName.MONITOR_SIZE,scan.nextInt());
             }if(s.equals("5")){
                 System.out.println("Enter Price: ");
-                map.put(CriteriaName.PRICE,scan.nextLine());
+                map.put(CriteriaName.PRICE,scan.nextInt());
             }if(s.equals("6")){
                 System.out.println("Enter Video card: ");
                 map.put(CriteriaName.VIDEO_CARD,scan.nextLine());
